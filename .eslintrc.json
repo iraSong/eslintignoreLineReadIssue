@@ -1,0 +1,34 @@
+﻿{
+	// SJ - rules can be set follow the EsLint guide: http://eslint.org/docs/rules/
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	//"extends": "eslint:recommended",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"experimentalObjectRestSpread": true,
+			"jsx": true
+		},
+		"sourceType": "module"
+	},
+	// SJ - EsLint allows plugins to configure style rules for different Frameworks/libraries (http://eslint.org/docs/user-guide/integrations)
+	// As an example, adding react support would just require you to uncomment the section below. Please note that not all plugins are supported
+	// natively. If you find support does not exist for a particular plugin that you need, please work with the Architecture team to add support.
+	"plugins": [
+		"react"
+	],
+	"rules": {
+		// DEFAULT RULES
+		// no-console: Generally console statements are for testing, so we want to highlight usages (http://eslint.org/docs/rules/no-console)
+		"no-console": 2,
+		// no-fallthrough: In C#, you can provide many cases in a switch statement that execute the same code (fallthrough). 
+		// We warn that this might not be the best behavior, but don't error (http://eslint.org/docs/rules/no-fallthrough)
+		"no-fallthrough": 1,
+		// TODO - I think we will want to revisit this rule as a default. (http://eslint.org/docs/rules/no-unused-vars)
+		"no-unused-vars": 0,
+		// no-mixed-spaces-and-tabs: mixed tabs and spaces are annoying, but shouldn't prevent JS dev (http://eslint.org/docs/rules/no-mixed-spaces-and-tabs)
+		"no-mixed-spaces-and-tabs": 0
+		// ADDITIONAL RULES (add below)
+	}
+}
